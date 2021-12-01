@@ -5,12 +5,14 @@
 @import './header.css';
 @import './reset.css';
 @import './hero.css';
+@import './form.css';
 
 
 /*Components*/
 @import './Components/wrapper.css';
 @import './Components/section-content.css';
 @import './Components/button.css';
+@import './Components/title.css';
 
 :root{
   /*Colors*/
@@ -26,6 +28,9 @@
   --secondary-font: 'Roboto', sans-serif;
 
   font-family: var(--primary-font);
+}
+html{
+  scroll-behavior: smooth;
 }
 body{
   background-color: var(--bg-color);

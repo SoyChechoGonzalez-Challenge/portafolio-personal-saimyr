@@ -1,0 +1,16 @@
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  padding-block: 4px;
+  padding-inline: 8px;
+  box-shadow: -4px 4px 0px var(--secondary-color);
+  background-color: var(--primary-color);
+  line-height: 56px;
+  align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .projects__title {
+    font-size: 32px;
+  }
+}
