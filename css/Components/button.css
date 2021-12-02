@@ -8,3 +8,12 @@
   font-weight: 700;
   color: var(--auxiliary-color)
 }
+.btn-actions{
+  /*border: 1px solid var(--auxiliary-color);*/
+  padding-block: 8px;
+  padding-inline: 8px;
+  background: none;
+  border: none;
+  color: var(--secondary-color);
+
+}

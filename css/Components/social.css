@@ -1,0 +1,8 @@
+.social .btn-icon{
+  font-size:24px;
+  color: var(--secondary-color);
+  text-align: center;
+}
+.btn-icon:hover{
+  color: var(--auxiliary-color);
+}

@@ -1,0 +1,25 @@
+.estudios{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: scroll;
+}
+.estudios table{
+  inline-size: 700px;
+  margin: 0 auto;
+}
+.estudios th, td{
+  border-bottom: 1px solid var(--auxiliary-color);
+  text-align: center;
+  padding-inline: 8px;
+}
+/*.actions{*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*}*/
+.actions button{
+  font-size:24px;
+  text-align:center;
+  display: contents;
+}

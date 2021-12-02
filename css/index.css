@@ -1,37 +1,42 @@
 /*Fonts*/
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap");
 
 /*Sections*/
-@import './header.css';
-@import './reset.css';
-@import './hero.css';
-@import './form.css';
-
+@import "./header.css";
+@import "./reset.css";
+@import "./hero.css";
+@import './estudios.css'; 
+@import './experiencia.css'; 
+@import "./form.css";
+@import "./footer.css";
 
 /*Components*/
-@import './Components/wrapper.css';
-@import './Components/section-content.css';
-@import './Components/button.css';
-@import './Components/title.css';
+@import "./Components/wrapper.css";
+@import "./Components/section-content.css";
+@import "./Components/button.css";
+@import "./Components/title.css";
+@import "./Components/social.css";
+@import "./Components/modal.css";
 
-:root{
+:root {
   /*Colors*/
-  --bg-color: #F8F7F3;
-  --primary-color: #DEAD00;
-  --secondary-color: #003F6B;
+  --bg-color: #f8f7f3;
+  --bg-second: rgba(0, 0, 0, 0.4);
+  --primary-color: #dead00;
+  --secondary-color: #003f6b;
   --thirth-color: white;
   --auxiliary-color: gray;
   --prueba1: #f0f;
 
   /*Fonts*/
-  --primary-font: 'Poppins', sans-serif;
-  --secondary-font: 'Roboto', sans-serif;
+  --primary-font: "Poppins", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
 
   font-family: var(--primary-font);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
-body{
+body {
   background-color: var(--bg-color);
 }

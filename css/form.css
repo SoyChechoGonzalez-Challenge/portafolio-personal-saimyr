@@ -13,15 +13,15 @@
   text-align: center;
 }
 
-.form label {
+label {
   display: flex;
   flex-direction: column;
   font-weight: 700;
   color: var(--primary-color);
 }
-.form input,
-.form textarea {
-  border: 1px solid #858c94;
+ input,
+textarea {
+  border: 1px solid var(--auxiliary-color);
   border-radius: 8px;
   padding-inline: 16px;
   padding-block: 12px;
@@ -29,6 +29,9 @@
   font-family: var(--font-primary);
   margin-block-start: 8px;
   box-sizing: border-box;
+}
+input::placeholder, textarea::placeholder{
+  color: var(--auxiliary-color);
 }
 @media screen and (min-width: 768px) {
   .form .title {
