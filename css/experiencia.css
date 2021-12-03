@@ -1,3 +1,6 @@
 .experiencia{
-  background-color: rebeccapurple;
+  /*background-color: rebeccapurple;*/
+  display:flex;
+  flex-direction: column;
+  gap: 16px;
 }

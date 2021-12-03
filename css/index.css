@@ -17,6 +17,7 @@
 @import "./Components/title.css";
 @import "./Components/social.css";
 @import "./Components/modal.css";
+@import "./Components/card.css";
 
 :root {
   /*Colors*/

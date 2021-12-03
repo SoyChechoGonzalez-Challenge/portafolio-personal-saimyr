@@ -1,9 +1,13 @@
 .estudios{
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   overflow-x: scroll;
+  /*border: 1px solid red;*/
+  padding-block: 32px;
+  margin-block: 32px;
+  gap: 32px;
 }
 .estudios table{
   inline-size: 700px;
