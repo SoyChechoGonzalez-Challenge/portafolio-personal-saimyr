@@ -21,4 +21,5 @@ const insertNewItem = () => {
 // Se añade el evento al botón del formulario
 newItem.addEventListener("click", () => {
   insertNewItem();
+  alert("Se ha agregado un nuevo curso")
 });

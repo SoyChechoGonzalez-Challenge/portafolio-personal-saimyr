@@ -42,5 +42,10 @@ html {
 body {
   background-color: var(--bg-color);
 }
-.prueba30{
-	color: green;
+input[type="date"]
+{
+    display:block;
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em;
+}
