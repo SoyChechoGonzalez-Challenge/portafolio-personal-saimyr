@@ -1,6 +1,6 @@
 .wrapper{
   max-inline-size: 1366px;
   margin:auto;
-  padding-inline: 24px;
-  /*border: 1px solid red;*/
+  margin-inline: 24px;
+  /* border: 8px solid green; */
 }

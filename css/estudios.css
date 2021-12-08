@@ -1,19 +1,21 @@
-.estudios{
+.estudios {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  overflow-x: scroll;
-  /*border: 1px solid red;*/
+  /* align-items: center; */
+  align-items: flex-start;
+  /* overflow-x: scroll; */
+  /* border: 1px solid red; */
   padding-block: 32px;
   margin-block: 32px;
   gap: 32px;
 }
-.estudios table{
+.estudios table {
   inline-size: 700px;
   margin: 0 auto;
 }
-.estudios th, td{
+.estudios th,
+td {
   border-bottom: 1px solid var(--auxiliary-color);
   text-align: center;
   padding-inline: 8px;
@@ -22,8 +24,13 @@
 /*  display: flex;*/
 /*  align-items: center;*/
 /*}*/
-.actions button{
-  font-size:24px;
-  text-align:center;
+.actions button {
+  font-size: 24px;
+  text-align: center;
   display: contents;
+}
+@media screen and (min-width: 500px) {
+  .estudios {
+    align-items: center;
+  }
 }
