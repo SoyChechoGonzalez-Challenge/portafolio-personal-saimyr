@@ -15,5 +15,7 @@
   background: none;
   border: none;
   color: var(--secondary-color);
-
+}
+.form-action-buttons input:first-child{
+	margin-bottom: 8px;
 }
