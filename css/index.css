@@ -46,6 +46,11 @@ input[type="date"] {
   display: block;
   -webkit-appearance: textfield;
   -moz-appearance: textfield;
-  min-height: 1.2em;
+  /* min-height: 1.2em; */
   padding: 12px 16px;
+}
+
+input {
+  -webkit-appearance: none;
+  color: red;
 }
