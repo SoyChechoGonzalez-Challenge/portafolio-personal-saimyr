@@ -33,7 +33,6 @@ function insertNewRecord(data) {
 
   //cell4.innerHTML = `<a onClick="onEdit(this)"><i class="far fa-edit"></i></a>
   //                   <a onClick="onDelete(this)"><i class="fas fa-trash"></i></a>`;
-
 }
 
 function resetForm() {

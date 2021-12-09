@@ -1,5 +1,5 @@
 header {
-  background-color: var(--thirth-color);
+  background-color: var(--bg-color);
   display: flex;
   justify-content: space-between;
   block-size: 60px;
@@ -62,7 +62,7 @@ nav ul li a {
     block-size: 100%;
     inline-size: 100%;
     opacity: 1;
-    background-color: var(--thirth-color);
+    background-color: var(--bg-color);
     position: initial;
     opacity: 1;
     justify-content: flex-end;

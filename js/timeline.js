@@ -3,7 +3,6 @@ let newItem = document.getElementById("newList");
 
 // Creamos la función que toma los datos del modal y los incrusta en el article
 const insertNewItem = () => {
-
   let date = document.getElementById("dateFinish").value;
   let course = document.getElementById("course").value;
   let university = document.getElementById("university").value;
@@ -21,5 +20,5 @@ const insertNewItem = () => {
 // Se añade el evento al botón del formulario
 newItem.addEventListener("click", () => {
   insertNewItem();
-  alert("Se ha agregado un nuevo curso")
+  alert("Se ha agregado un nuevo curso");
 });
