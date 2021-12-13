@@ -1,4 +1,4 @@
-.btn{
+.btn {
   background: none;
   border: 1px solid var(--auxiliary-color);
   padding-block: 8px;
@@ -6,9 +6,9 @@
   border-radius: 4px;
   font-size: 24px;
   font-weight: 700;
-  color: var(--auxiliary-color)
+  color: var(--auxiliary-color);
 }
-.btn-actions{
+.btn-actions {
   /*border: 1px solid var(--auxiliary-color);*/
   padding-block: 8px;
   padding-inline: 8px;
@@ -16,6 +16,6 @@
   border: none;
   color: var(--secondary-color);
 }
-.form-action-buttons input:first-child{
+/* .form-action-buttons input:first-child{
 	margin-bottom: 8px;
-}
+} */

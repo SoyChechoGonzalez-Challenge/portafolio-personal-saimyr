@@ -11,6 +11,7 @@
     <script src="./js/index.js" defer></script>
     <script src="./js/modal.js" defer></script>
     <script src="./js/timeline.js" defer></script>
+    <script src="./js/formulario.js" defer></script>
     <link rel="stylesheet" href="./css/index.css" />
     <link
       rel="icon"
@@ -61,15 +62,16 @@
         <h2 class="title">Mis estudios</h2>
         <article id="myModal" class="modal">
           <div id="agregar-estudio" class="modal-content">
-            <span class="close">
+            <span class="closeModal" id="closeModal">
               <i class="fas fa-times"></i>
             </span>
             <h3 class="title-modal">Agregar estudio</h3>
             <form
-              onsubmit="event.preventDefault();"
+              onsubmit="event.preventDefault();validate();"
               class="form-group"
+              id="form"
             >
-              <div>
+              <div class="group--date" class="group--date">
                 <label>Fecha Finalización</label>
                 <input
                   type="date"
@@ -80,31 +82,59 @@
                 />
               </div>
 
-              <div>
-                <label>Curso</label
+              <div class="group__course" id="group__course">
+                <label class="form__label">Curso</label
                 ><label class="validation-error hide"></label>
-                <input type="text" name="course" id="course" required />
+                <div class="form__grupo-input">
+                  <input
+                    type="text"
+                    name="course"
+                    class="form__input"
+                    id="course"
+                    required
+                  />
+                  <i class="form__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">
+                  El curso debe tener de 2 a 40 carácteres y solo puede contener
+                  letras con su respectivo acento.
+                </p>
               </div>
-              <div>
-                <label>Universidad</label>
-                <input type="text" name="university" id="university" required />
-              </div>
-              <!-- <div> -->
-              <!--                 <label>Descripcion</label> -->
-              <!--                 <textarea type="text" name="description" id="description" required> -->
-              <!-- </textarea> -->
-              <!--               </div> -->
 
-              <div class="form-action-buttons">
-                <input id="newList" type="submit" value="Submit" />
-                <input type="reset" value="Resetear" />
+              <div class="group__university" id="group__university">
+                <label class="form__label">Universidad</label>
+                <div class="form__grupo-input">
+                  <input
+                    type="text"
+                    name="university"
+                    class="form__input"
+                    id="university"
+                    required
+                  />
+                  <i class="form__validacion-estado fas fa-times-circle"></i>
+                </div>
+                <p class="form__input-error">
+                  La Universidad debe tener de 2 a 40 carácteres y solo puede
+                  contener letras con su respectivo acento.
+                </p>
+              </div>
+              <div class="form__mensaje" id="form__mensaje">
+                <p>
+                  <i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por
+                  favor rellena el formulario correctamente.
+                </p>
+              </div>
+              <div class="form__group formulario__grupo-btn-enviar">
+                <button type="submit" class="btn form__btn" id="formBtn">
+                  Enviar
+                </button>
               </div>
             </form>
           </div>
         </article>
         <article class="timeline" id="employeeList">
           <ul>
-            <button class="btn-actions" id="myBtn">
+            <button class="btn-actions" id="openModal">
               <i class="fas fa-plus"></i>
             </button>
             <li>
@@ -264,18 +294,6 @@
           <i class="fab fa-twitter"></i>
         </a>
       </div>
-    </footer>
-  </body>
-</html>
-    </footer>
-  </body>
-</html>
-    </footer>
-  </body>
-</html>
-    </footer>
-  </body>
-</html>
     </footer>
   </body>
 </html>

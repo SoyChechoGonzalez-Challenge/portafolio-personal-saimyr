@@ -1,5 +1,5 @@
 // Tomamos el botón del formulario
-let newItem = document.getElementById("newList");
+let newItem = document.getElementById("formBtn");
 
 // Creamos la función que toma los datos del modal y los incrusta en el article
 const insertNewItem = () => {

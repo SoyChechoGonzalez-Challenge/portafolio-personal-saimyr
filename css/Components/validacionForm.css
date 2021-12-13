@@ -1,0 +1,53 @@
+.form__input {
+  outline: none;
+}
+.form__validacion-estado {
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  z-index: 100;
+  font-size: 16px;
+  opacity: 0;
+}
+
+.form__grupo-input {
+  position: relative;
+}
+
+.form__grupo-correcto .form__validacion-estado {
+  color: #1ed12d;
+  opacity: 1;
+}
+
+.form__grupo-incorrecto .form__label {
+  color: #bb2929;
+}
+
+.form__grupo-incorrecto .form__validacion-estado {
+  color: #bb2929;
+  opacity: 1;
+}
+
+.form__grupo-incorrecto .form__input {
+  border: 3px solid #bb2929;
+}
+.form__input-error {
+  display: none;
+}
+.form__input-error-active {
+  display: block;
+}
+
+.form__mensaje-exito {
+  display: none;
+}
+.form__mensaje-exito-active {
+  display: block;
+}
+
+.form__mensaje {
+  display: none;
+}
+.form__mensaje-active {
+  display: block;
+}

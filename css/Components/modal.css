@@ -35,7 +35,7 @@
   inline-size: 50%;
 }
  */
-.close {
+.closeModal {
   color: var(--auxiliary-color);
   font-size: 24px;
   font-weight: bold;
@@ -44,6 +44,7 @@
   margin-inline-start: 32px;
   border: 1px solid var(--auxiliary-color);
   padding-inline: 8px;
+  cursor: pointer;
 }
 
 .close:hover,
