@@ -20,13 +20,18 @@ window.onclick = function (e) {
 formBtn.onclick = function (e) {
   e.preventDefault();
   if (campos.course && campos.university === true) {
-    console.log("Formulario enviado");
+    // console.log("Formulario enviado");
+    alert("Se ha añadido el curso correctamente");
     form.reset();
     myModal.style.display = "none";
 
     document.querySelectorAll(".form__grupo-correcto").forEach((icono) => {
       icono.classList.remove("form__grupo-correcto");
     });
+  } else {
+    myModal.style.display = "block";
+    console.log("Formulario no enviado");
+    alert("Por favor, completa el formulario");
   }
 };
 
