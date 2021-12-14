@@ -30,7 +30,7 @@ btnSend.onclick = function (e) {
     });
   } else {
     myModal.style.display = "block";
-    alert("Por favor, completa el formulario");
+    alert("Por favor, completa el formulario correctamente");
   }
 };
 
