@@ -1,7 +1,8 @@
 const openModal = document.getElementById("openModal");
 const myModal = document.getElementById("myModal");
 const closeModal = document.getElementById("closeModal");
-const formBtn = document.getElementById("formBtn");
+const btnSend = document.getElementById("btnSend");
+const form = document.getElementById("form");
 
 openModal.onclick = function () {
   myModal.style.display = "block";
@@ -17,32 +18,36 @@ window.onclick = function (e) {
   }
 };
 
-formBtn.onclick = function (e) {
+btnSend.onclick = function (e) {
   e.preventDefault();
-  if (campos.course && campos.university === true) {
-    // console.log("Formulario enviado");
+  if (fields.course && fields.university !== null) {
+    insertNewItem();
+    resetForm();
     alert("Se ha añadido el curso correctamente");
-    form.reset();
     myModal.style.display = "none";
-
     document.querySelectorAll(".form__grupo-correcto").forEach((icono) => {
       icono.classList.remove("form__grupo-correcto");
     });
   } else {
     myModal.style.display = "block";
-    console.log("Formulario no enviado");
     alert("Por favor, completa el formulario");
   }
 };
 
-const form = document.getElementById("form");
-const inputs = document.querySelectorAll("#form input");
-
-const expresiones = {
-  textoValida: /^[a-zA-ZÀ-ÿ\s]{2,40}$/,
+const resetForm = () => {
+  form.reset();
+  fields["course"] = false;
+  fields["university"] = false;
+  console.log(fields);
 };
 
-const campos = {
+const inputs = document.querySelectorAll("#form input");
+
+const expressions = {
+  textRules: /^[a-zA-ZÀ-ÿ\s]{2,40}$/,
+};
+
+const fields = {
   course: false,
   university: false,
 };
@@ -50,53 +55,55 @@ const campos = {
 const validarFormulario = (e) => {
   switch (e.target.name) {
     case "course":
-      validarCampo(expresiones.textoValida, e.target, "course");
+      validarCampo(expressions.textRules, e.target, "course");
       break;
     case "university":
-      validarCampo(expresiones.textoValida, e.target, "university");
+      validarCampo(expressions.textRules, e.target, "university");
       break;
   }
 };
 
-const validarCampo = (expresion, input, campo) => {
-  if (expresion.test(input.value)) {
+const validarCampo = (expression, input, field) => {
+  if (expression.test(input.value)) {
     document
-      .getElementById(`group__${campo}`)
+      .getElementById(`group__${field}`)
       .classList.remove("form__grupo-incorrecto");
     document
-      .getElementById(`group__${campo}`)
+      .getElementById(`group__${field}`)
       .classList.add("form__grupo-correcto");
     document
-      .querySelector(`#group__${campo} i`)
+      .querySelector(`#group__${field} i`)
       .classList.add("fa-check-circle");
     document
-      .querySelector(`#group__${campo} i`)
+      .querySelector(`#group__${field} i`)
       .classList.remove("fa-times-circle");
     document
-      .querySelector(`#group__${campo} .form__input-error`)
+      .querySelector(`#group__${field} .form__input-error`)
       .classList.remove("form__input-error-active");
-    campos[campo] = true;
+    fields[field] = true;
   } else {
     document
-      .getElementById(`group__${campo}`)
+      .getElementById(`group__${field}`)
       .classList.add("form__grupo-incorrecto");
     document
-      .getElementById(`group__${campo}`)
+      .getElementById(`group__${field}`)
       .classList.remove("form__grupo-correcto");
     document
-      .querySelector(`#group__${campo} i`)
+      .querySelector(`#group__${field} i`)
       .classList.add("fa-times-circle");
     document
-      .querySelector(`#group__${campo} i`)
+      .querySelector(`#group__${field} i`)
       .classList.remove("fa-check-circle");
     document
-      .querySelector(`#group__${campo} .form__input-error`)
+      .querySelector(`#group__${field} .form__input-error`)
       .classList.add("form__input-error-active");
-    campos[campo] = false;
+    fields[field] = false;
   }
 };
 
-inputs.forEach((input) => {
+const getKey = inputs.forEach((input) => {
   input.addEventListener("keyup", validarFormulario);
   input.addEventListener("blur", validarFormulario);
 });
+
+/* loadCourses(courses); */

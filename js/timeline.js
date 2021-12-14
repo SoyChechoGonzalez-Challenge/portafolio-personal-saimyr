@@ -1,5 +1,5 @@
 // Tomamos el botón del formulario
-let newItem = document.getElementById("formBtn");
+const newItem = document.getElementById("btnSend");
 
 // Creamos la función que toma los datos del modal y los incrusta en el article
 const insertNewItem = () => {
@@ -16,8 +16,3 @@ const insertNewItem = () => {
   </li>`;
   article.insertAdjacentHTML("afterend", newList);
 };
-
-// Se añade el evento al botón del formulario
-newItem.addEventListener("click", () => {
-  insertNewItem();
-});
