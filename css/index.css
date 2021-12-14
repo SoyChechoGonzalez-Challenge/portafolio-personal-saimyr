@@ -48,3 +48,6 @@ input {
   -moz-appearance: none;
   appearance: none;
 }
+.block-scroll {
+  overflow: hidden;
+}

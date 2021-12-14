@@ -3,13 +3,16 @@ const myModal = document.getElementById("myModal");
 const closeModal = document.getElementById("closeModal");
 const btnSend = document.getElementById("btnSend");
 const form = document.getElementById("form");
+const body = document.querySelector("body");
 
 openModal.onclick = function () {
   myModal.style.display = "block";
+  body.style.position = "fixed";
 };
 
 closeModal.onclick = function () {
   myModal.style.display = "none";
+  body.style.position = "initial";
 };
 
 window.onclick = function (e) {
