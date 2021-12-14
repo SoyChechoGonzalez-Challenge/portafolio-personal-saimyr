@@ -3,16 +3,16 @@ const myModal = document.getElementById("myModal");
 const closeModal = document.getElementById("closeModal");
 const btnSend = document.getElementById("btnSend");
 const form = document.getElementById("form");
-const body = document.querySelector("body");
+// const body = document.querySelector("body");
 
 openModal.onclick = function () {
   myModal.style.display = "block";
-  body.style.position = "fixed";
+  // body.style.position = "fixed";
 };
 
 closeModal.onclick = function () {
   myModal.style.display = "none";
-  body.style.position = "initial";
+  // body.style.position = "initial";
 };
 
 window.onclick = function (e) {
@@ -23,7 +23,7 @@ window.onclick = function (e) {
 
 btnSend.onclick = function (e) {
   e.preventDefault();
-  if (fields.course && fields.university !== null) {
+  if (fields.course && fields.university) {
     insertNewItem();
     resetForm();
     alert("Se ha añadido el curso correctamente");
